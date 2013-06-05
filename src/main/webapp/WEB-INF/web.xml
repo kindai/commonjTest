@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>self.kin.test.TestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/TestServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestScheduler</servlet-name>
+        <servlet-class>self.kin.test.TestScheduler</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestScheduler</servlet-name>
+        <url-pattern>/TestScheduler</url-pattern>
+    </servlet-mapping>
+
+    <resource-ref>
+        <res-ref-name>timer/TestTimer</res-ref-name>
+        <res-type>commonj.timers.TimerManager</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
+
+</web-app>
